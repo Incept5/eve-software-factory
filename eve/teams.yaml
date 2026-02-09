@@ -1,0 +1,8 @@
+version: 1
+teams:
+  factory:
+    lead: factory_pm
+    members: [factory_planner, factory_coder, factory_verifier]
+    dispatch:
+      mode: relay
+

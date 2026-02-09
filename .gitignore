@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+dist
+.env
+.env.*
+
+# Local editor junk
+.vscode
+.idea
+
+# Pack/test artifacts (if someone runs against this repo directly)
+.eve/packs.lock.yaml

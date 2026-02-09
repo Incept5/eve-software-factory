@@ -1,0 +1,30 @@
+agents:
+  profiles:
+    fast-triage:
+      - harness: claude
+        model: opus-4.6
+        reasoning_effort: low
+
+    deep-reasoning:
+      - harness: codex
+        model: codex-5.3
+        reasoning_effort: x-high
+      - harness: claude
+        model: opus-4.6
+        reasoning_effort: high
+
+    primary-coder:
+      - harness: codex
+        model: codex-5.3
+        reasoning_effort: high
+      - harness: claude
+        model: opus-4.6
+        reasoning_effort: high
+
+  defaults:
+    harness: codex
+    harness_profile: primary-coder
+    git:
+      commit: auto
+      push: on_success
+

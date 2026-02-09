@@ -1,0 +1,7 @@
+version: 1
+routes:
+  - id: route_factory
+    match: "^factory\\b"
+    target: team:factory
+    description: "Route 'factory ...' messages to the factory relay team"
+

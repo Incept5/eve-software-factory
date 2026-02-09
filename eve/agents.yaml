@@ -1,0 +1,38 @@
+version: 1
+agents:
+  factory_pm:
+    slug: factory-pm
+    skill: factory-pm
+    harness_profile: fast-triage
+    description: "Intake + brief: interviews if underspecified, writes brief with acceptance criteria"
+    policies:
+      permission_policy: auto_edit
+      git: { commit: auto, push: on_success }
+
+  factory_planner:
+    slug: factory-planner
+    skill: factory-planner
+    harness_profile: deep-reasoning
+    description: "Spec + plan: investigates repo if existing, writes spec and implementation plan"
+    policies:
+      permission_policy: auto_edit
+      git: { commit: auto, push: on_success }
+
+  factory_coder:
+    slug: factory-coder
+    skill: factory-coder
+    harness_profile: primary-coder
+    description: "Implementation: executes the plan with tests, keeps changes scoped"
+    policies:
+      permission_policy: auto_edit
+      git: { commit: auto, push: on_success }
+
+  factory_verifier:
+    slug: factory-verifier
+    skill: factory-verifier
+    harness_profile: deep-reasoning
+    description: "Verification: runs tests, checks acceptance criteria, opens final PR"
+    policies:
+      permission_policy: auto_edit
+      git: { commit: auto, push: on_success }
+

@@ -1,0 +1,8 @@
+version: 1
+id: software-factory
+imports:
+  agents: eve/agents.yaml
+  teams: eve/teams.yaml
+  chat: eve/chat.yaml
+  x_eve: eve/x-eve.yaml
+
