@@ -5,4 +5,6 @@ imports:
   teams: eve/teams.yaml
   chat: eve/chat.yaml
   x_eve: eve/x-eve.yaml
+gateway:
+  default_policy: none    # workers hidden by default; chatbots opt in below
 
